@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+       
+
+
+
+
+</head>
+
+
+
+<body class="bg-dark">
+
+
+
+
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+                <div class="card  text-white border-0">
+                    <div class="card-body bg-dark p-5">
+
+                        <h1 class="mt-4 text-center ">Submit your project
+                        </h1>
+                        <p class="mt-5">We will review your project after it has been submitted and let you know once it
+                            has been published. We kindly ask you to be as complete as possible in the data you provide
+                            and to keep the information up-to-date whenever your project gets updates.</p>
+
+                        <p><strong>Note: You can always edit your project after it has been submitted by using the link
+                                and password provided to you by mail.</strong></p>
+
+
+
+
+                        <h3><strong>Project details</strong></h3>
+
+                        <hr>
+                        <h6>Project name*</h6>
+                        <form action="" method="post">
+                            <input class="form-control form-control-lg" type="text"
+                                placeholder="Enter Your Project Name Here" aria-label=".form-control-lg example">
+
+
+
+                            <p>Avoid long names and only use alphabetic characters. Please do not use the word "NFT" in
+                                your project's name.</p>
+
+                            <h6>Project Description*</h6>
+
+                            <textarea class="form-control" rows="5" placeholder="** Write Description of your Project"
+                                required></textarea>
+
+
+                            <p>Provide an enticing description of your project to explain the general idea, purpose and
+                                features. You can style your description and add links if needed.</p>
+                            <h6>Project Map*</h6>
+
+                            <textarea class="form-control" rows="5" placeholder="** Describe roadmap of your Project"
+                                required></textarea>
+
+
+
+
+
+
+
+
+
+                            <div class="container text-center">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3>Marketplace</h3>
+                                        <select class="form-control-lg w-100" name="" id="">
+
+                                            <option value="TBD">TBD</option>
+                                            <option value="OpenSea">OpenSea</option>
+                                            <option value="LooksRare">LooksRare</option>
+                                            <option value="SuperRare">SuperRare</option>
+                                            <option value="NiftGateway">NiftGateway</option>
+                                            <option value="Magic Eden">Magic Eden</option>
+                                            <option value="Mintable">Mintable</option>
+                                            <option value="Rarible">Rarible</option>
+                                            <option value="NFTrade">NFTrade</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-md-6 ">
+                                        <h3>Project URL</h3>
+                                        <input class="form-control form-control-lg" type="text"
+                                            placeholder=" https://www.example.com"
+                                            aria-label=".form-control-lg example">
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <h3>BlockChain</h3>
+                                    <select class="form-control-lg" name="" id="">
+
+                                        <option value="Etherium">Etherium</option>
+                                        <option value="Solana">Solana</option>
+                                        <option value="Polygon">Polygon</option>
+                                        <option value="Cardano">Cardano</option>
+                                        <option value="BSC">BSC</option>
+                                        <option value="Avalanche">Avalanche</option>
+                                        <option value="NEAR">NEAR</option>
+                                        <option value="WAX">WAX</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                            <h3 class="mt-5">NFT Image (Better 512x512) *
+                            </h3>
+
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile04"
+                                    aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                            </div>
+
+
+                            <h3 class="mt-5">Presale Date (if no Presale, Select To Be Announced)
+                            </h3>
+                            <input type="radio" name="pdate" id="1" onclick="document.getElementById('presale').style.display='block'"><label for="1" class="ms-2">Date Time</label> <br>
+
+
+                            <input type="radio" name="pdate" id="2" onclick="document.getElementById('presale').style.display='none'"><label for="2" class="ms-2 mt-2"> To Be
+                                Announced</label>
+
+                            <div class="row ">
+                                <div class="col-md-10 mx-auto  " id="presale">
+                                    <input class="form-control-lg" type="time" name="" id="">
+                                    <input class="form-control-lg" type="date" name="" id="">
+                                    <select class="form-control-lg" name="" id="">
+                                        <option value="UTC" selected="selected" data-i="0">UTC</option>
+                                        <option value="UTC-11:00">UTC-11:00</option>
+                                        <option value="UTC-10:00">UTC-10:00</option>
+                                        <option value="UTC-09:00">UTC-09:00</option>
+                                        <option value="UTC-08:00">UTC-08:00</option>
+                                        <option value="UTC-07:00">UTC-07:00</option>
+                                        <option value="UTC-06:00">UTC-06:00</option>
+                                        <option value="UTC-05:00">UTC-05:00</option>
+                                        <option value="UTC-04:30">UTC-04:30</option>
+                                        <option value="UTC-04:00">UTC-04:00</option>
+                                        <option value="UTC-03:30">UTC-03:30</option>
+                                        <option value="UTC-03:00">UTC-03:00</option>
+                                        <option value="UTC-02:00">UTC-02:00</option>
+                                        <option value="UTC-01:00">UTC-01:00</option>
+                                        <option value="UTC+01:00">UTC+01:00</option>
+                                        <option value="UTC+02:00">UTC+02:00</option>
+                                        <option value="UTC+03:00">UTC+03:00</option>
+                                        <option value="UTC+03:30">UTC+03:30</option>
+                                        <option value="UTC+04:00">UTC+04:00</option>
+                                        <option value="UTC+04:30">UTC+04:30</option>
+                                        <option value="UTC+05:00">UTC+05:00</option>
+                                        <option value="UTC+05:30">UTC+05:30</option>
+                                        <option value="UTC+05:45">UTC+05:45</option>
+                                        <option value="UTC+06:00">UTC+06:00</option>
+                                        <option value="UTC+06:30">UTC+06:30</option>
+                                        <option value="UTC+07:00">UTC+07:00</option>
+                                        <option value="UTC+08:00">UTC+08:00</option>
+                                        <option value="UTC+09:00">UTC+09:00</option>
+                                        <option value="UTC+09:30">UTC+09:30</option>
+                                        <option value="UTC+10:00">UTC+10:00</option>
+                                        <option value="UTC+11:00">UTC+11:00</option>
+                                        <option value="UTC+12:00">UTC+12:00</option>
+                                        <option value="UTC+13:00">UTC+13:00</option>
+                                    </select>
+
+
+                                </div>
+                            </div>
+                            <h3 class="mt-5">Public Sale Date</h3>
+                            <input type="radio" name="pdate" id="3" onclick="document.getElementById('publicsale').style.display='block'" selected><label for="3" class="ms-2">Date Time</label> <br>
+
+
+                            <input type="radio" name="pdate" id="4" onclick="document.getElementById('publicsale').style.display='none'"><label for="4" class="ms-2 mt-2"> To Be
+                                Announced</label>
+
+
+                            <div class="row ">
+
+                                <div class="col-md-10 mx-auto  " id="publicsale">
+                                    <input class="form-control-lg" type="time" name="" id="">
+                                    <input class="form-control-lg" type="date" name="" id="">
+                                    <select class="form-control-lg" name="" id="">
+                                        <option value="UTC" selected="selected" data-i="0">UTC</option>
+                                        <option value="UTC-11:00">UTC-11:00</option>
+                                        <option value="UTC-10:00">UTC-10:00</option>
+                                        <option value="UTC-09:00">UTC-09:00</option>
+                                        <option value="UTC-08:00">UTC-08:00</option>
+                                        <option value="UTC-07:00">UTC-07:00</option>
+                                        <option value="UTC-06:00">UTC-06:00</option>
+                                        <option value="UTC-05:00">UTC-05:00</option>
+                                        <option value="UTC-04:30">UTC-04:30</option>
+                                        <option value="UTC-04:00">UTC-04:00</option>
+                                        <option value="UTC-03:30">UTC-03:30</option>
+                                        <option value="UTC-03:00">UTC-03:00</option>
+                                        <option value="UTC-02:00">UTC-02:00</option>
+                                        <option value="UTC-01:00">UTC-01:00</option>
+                                        <option value="UTC+01:00">UTC+01:00</option>
+                                        <option value="UTC+02:00">UTC+02:00</option>
+                                        <option value="UTC+03:00">UTC+03:00</option>
+                                        <option value="UTC+03:30">UTC+03:30</option>
+                                        <option value="UTC+04:00">UTC+04:00</option>
+                                        <option value="UTC+04:30">UTC+04:30</option>
+                                        <option value="UTC+05:00">UTC+05:00</option>
+                                        <option value="UTC+05:30">UTC+05:30</option>
+                                        <option value="UTC+05:45">UTC+05:45</option>
+                                        <option value="UTC+06:00">UTC+06:00</option>
+                                        <option value="UTC+06:30">UTC+06:30</option>
+                                        <option value="UTC+07:00">UTC+07:00</option>
+                                        <option value="UTC+08:00">UTC+08:00</option>
+                                        <option value="UTC+09:00">UTC+09:00</option>
+                                        <option value="UTC+09:30">UTC+09:30</option>
+                                        <option value="UTC+10:00">UTC+10:00</option>
+                                        <option value="UTC+11:00">UTC+11:00</option>
+                                        <option value="UTC+12:00">UTC+12:00</option>
+                                        <option value="UTC+13:00">UTC+13:00</option>
+                                    </select>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="row text-center mt-3">
+                                <div class="col-md-4">
+                                    <h4>Website</h4>
+                                    <input class="form-control form-control-lg" type="text"
+                                        placeholder=" https://www.example.com">
+
+                                </div>
+                                <div class="col-md-4">
+                                    <h4>Discord*</h4>
+                                    <input class="form-control form-control-lg" type="text"
+                                        placeholder=" https://www.example.com">
+
+                                </div>
+                                <div class="col-md-4">
+                                    <h4>Twitter*</h4>
+                                    <input class="form-control form-control-lg" type="text"
+                                        placeholder=" https://www.example.com">
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                            <div class="row p-3">
+                                <h5>Note</h5>
+                                <p>It's very probable that we'll approach you to double-check some of details of your project. As a result, we respectfully request that you check your email on a frequent basis (we will send you an email if we have questions) and join our Discord server so that we can contact you directly (please file a ticket in the #support channel). Caution: Projects that do not join our Discord server will be removed from the NFTGIFT directory.</p>
+                            
+                                <button class="btn btn-success mt-3"> Submit</button>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
