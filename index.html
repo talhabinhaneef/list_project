@@ -8,12 +8,30 @@
     <title>List Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-       
+
 
 
 
 
 </head>
+<script>
+    var name = document.getElementById("projectname").value
+    var description = document.getElementById("projectdescription").value
+    var Marketplace = document.getElementById("projectmarketplace").value
+    var blockchain = document.getElementById("projectblockchain").value
+    var twitter = document.getElementById("twitter").value
+    var email = document.getElementById("projectemail").value
+    var discordid = document.getElementById("projectdiscord").value
+    function validate() {
+
+        if (name == "" || description == "" || Marketplace == "" || blockchain == "" || twitter == "" || email == "" || discordid == "") {
+
+            alert("Error")
+        }
+    }
+
+
+</script>
 
 
 
@@ -37,8 +55,7 @@
                             has been published. We kindly ask you to be as complete as possible in the data you provide
                             and to keep the information up-to-date whenever your project gets updates.</p>
 
-                        <p><strong>Note: You can always edit your project after it has been submitted by using the link
-                                and password provided to you by mail.</strong></p>
+
 
 
 
@@ -47,8 +64,8 @@
 
                         <hr>
                         <h6>Project name*</h6>
-                        <form action="" method="post">
-                            <input class="form-control form-control-lg" type="text"
+                        <form action="" method="post" onsubmit="validate()">
+                            <input class="form-control form-control-lg" type="text" id="projectname"
                                 placeholder="Enter Your Project Name Here" aria-label=".form-control-lg example">
 
 
@@ -58,16 +75,21 @@
 
                             <h6>Project Description*</h6>
 
-                            <textarea class="form-control" rows="5" placeholder="** Write Description of your Project"
-                                required></textarea>
+                            <textarea class="form-control" rows="5" id="projectdescription"
+                                placeholder="** Write Description of your Project" ></textarea>
 
 
                             <p>Provide an enticing description of your project to explain the general idea, purpose and
                                 features. You can style your description and add links if needed.</p>
-                            <h6>Project Map*</h6>
+                            <h6>Project Map</h6>
 
                             <textarea class="form-control" rows="5" placeholder="** Describe roadmap of your Project"
-                                required></textarea>
+                                ></textarea>
+
+
+                            <h3 class="text-center">Marketplace and blockchain</h3>
+
+
 
 
 
@@ -81,7 +103,8 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <h3>Marketplace</h3>
-                                        <select class="form-control-lg w-100" name="" id="">
+                                        <select class="form-control-lg w-100" name="projectmarketplace"
+                                            id="projectmarketplace">
 
                                             <option value="TBD">TBD</option>
                                             <option value="OpenSea">OpenSea</option>
@@ -107,7 +130,7 @@
 
                                 <div class="row">
                                     <h3>BlockChain</h3>
-                                    <select class="form-control-lg" name="" id="">
+                                    <select class="form-control-lg" name="projectblockchain" id="projectblockchain">
 
                                         <option value="Etherium">Etherium</option>
                                         <option value="Solana">Solana</option>
@@ -122,10 +145,32 @@
                                 </div>
                             </div>
 
+
+
+                            <h3>Tokenomics</h3>
+                            <h6>Pre-sale/Whitelist price
+                            </h6>
+                            <input class="form-control" type="number" name="" id="" placeholder="0.05" step="any">
+
+                            <p>If you do not know the price yet, set this field to 0.
+                                If your NFT is free, set this field to a number below 0.</p>
+
+
+                            <h6>Public sale/Mint price
+                            </h6>
+                            <input class="form-control" type="number" name="" id="" placeholder="0.05" step="any">
+
+                            <p>If you do not know the price yet, set this field to 0.
+                                If your NFT is free, set this field to a number below 0.</p>
+
                             <h3 class="mt-5">NFT Image (Better 512x512) *
                             </h3>
 
                             <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile04"
+                                    aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                                <input type="file" class="form-control mx-4" id="inputGroupFile04"
+                                    aria-describedby="inputGroupFileAddon04" aria-label="Upload">
                                 <input type="file" class="form-control" id="inputGroupFile04"
                                     aria-describedby="inputGroupFileAddon04" aria-label="Upload">
                             </div>
@@ -133,10 +178,14 @@
 
                             <h3 class="mt-5">Presale Date (if no Presale, Select To Be Announced)
                             </h3>
-                            <input type="radio" name="pdate" id="1" onclick="document.getElementById('presale').style.display='block'"><label for="1" class="ms-2">Date Time</label> <br>
+                            <input type="radio" name="presale" id="1"
+                                onclick="document.getElementById('presale').style.display='block'" checked><label
+                                for="1" class="ms-2">Date Time</label> <br>
 
 
-                            <input type="radio" name="pdate" id="2" onclick="document.getElementById('presale').style.display='none'"><label for="2" class="ms-2 mt-2"> To Be
+                            <input type="radio" name="presale" id="2"
+                                onclick="document.getElementById('presale').style.display='none'"><label for="2"
+                                class="ms-2 mt-2"> To Be
                                 Announced</label>
 
                             <div class="row ">
@@ -183,10 +232,14 @@
                                 </div>
                             </div>
                             <h3 class="mt-5">Public Sale Date</h3>
-                            <input type="radio" name="pdate" id="3" onclick="document.getElementById('publicsale').style.display='block'" selected><label for="3" class="ms-2">Date Time</label> <br>
+                            <input type="radio" name="publicsale" id="3"
+                                onclick="document.getElementById('publicsale').style.display='block'" checked><label
+                                for="3" class="ms-2">Date Time</label> <br>
 
 
-                            <input type="radio" name="pdate" id="4" onclick="document.getElementById('publicsale').style.display='none'"><label for="4" class="ms-2 mt-2"> To Be
+                            <input type="radio" name="publicsale" id="4"
+                                onclick="document.getElementById('publicsale').style.display='none'"><label for="4"
+                                class="ms-2 mt-2"> To Be
                                 Announced</label>
 
 
@@ -251,10 +304,31 @@
                                 </div>
                                 <div class="col-md-4">
                                     <h4>Twitter*</h4>
-                                    <input class="form-control form-control-lg" type="text"
+                                    <input class="form-control form-control-lg" type="text" id="twitter" name="twitter"
                                         placeholder=" https://www.example.com">
 
                                 </div>
+                            </div>
+
+                            <div class="row">
+                                <h4>Your Details</h4>
+                                <h6>Contact email* </h6>
+                                <input class="form-control form-control-lg" type="text" id="projectemail"
+                                    name="projectemail" placeholder=" you@email.com">
+                                <p>We will contact you via this email address if we have additional questions or once
+                                    your event has been approved.</p>
+                                <h6>Discord ID*</h6>
+                                <input class="form-control form-control-lg" type="text"
+                                    placeholder=" nftgift.beauty#1234" id="projectdiscord" name="projectdiscord">
+                                <p>⚠️ <span style="color:red;"> Warning: </span>It is highly likely that we will contact
+                                    you to verify some of the information regarding your project. As such, we kindly ask
+                                    you to check your mails regularly (we will send you a mail to notify you if we have
+                                    questions) and join our Discord server so that we can contact you directly (If you
+                                    receive a mail from us regarding your listing, please open a ticket in the #support
+                                    channel).</p>
+
+
+
                             </div>
 
 
@@ -267,10 +341,25 @@
 
                             <div class="row p-3">
                                 <h5>Note</h5>
-                                <p>It's very probable that we'll approach you to double-check some of details of your project. As a result, we respectfully request that you check your email on a frequent basis (we will send you an email if we have questions) and join our Discord server so that we can contact you directly (please file a ticket in the #support channel). Caution: Projects that do not join our Discord server will be removed from the NFTGIFT directory.</p>
-                            
+                                <p>It's very probable that we'll approach you to double-check some of details of your
+                                    project. As a result, we respectfully request that you check your email on a
+                                    frequent basis (we will send you an email if we have questions) and join our Discord
+                                    server so that we can contact you directly (please file a ticket in the #support
+                                    channel). Caution: Projects that do not join our Discord server will be removed from
+                                    the NFTGIFT directory.</p>
+
+
+                                <div class="input-group-text bg-dark text-white">
+                                    <input type="checkbox" aria-label="Checkbox for following text input">
+                                    <span class="mx-3">I agree with the terms and conditions</span>
+                                </div>
+
                                 <button class="btn btn-success mt-3"> Submit</button>
                             </div>
+
+
+
+
                         </form>
 
 
@@ -282,7 +371,17 @@
 
             </div>
         </div>
+
+
+
+
+
+
     </div>
+    </div>
+
+
+    ]
 
 
 
